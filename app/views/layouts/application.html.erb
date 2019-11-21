@@ -12,30 +12,42 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+<body>
+  <div id="flex-content-container">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">what should I watch...</a>
 
-  <body>
-  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <%= link_to 'WSiW', root_url, class: 'navbar-brand' %>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Sign Up</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Quizzes</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-      <li class="nav-item">
-        <%= link_to 'See All Courses', root_url, class: 'nav-link' %>
-      </li>
-    </ul>
-    <ul class="navbar-nav">
-        <li class="nav-item">
-          <%= link_to 'Sign in', root_url, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Sign up!', root_url, class: 'nav-link' %>
-        </li>
-    </ul>
-  </div>
-</nav>
     <%= yield %>
+</div>
+
+    <div id="footer">
+      <div class="container">
+        <%= link_to 'About WSiW', '#' %>
+        <br />
+        <%= link_to 'Contact', '#' %>
+      </div>
+    </div>
   </body>
 </html>
