@@ -1,0 +1,2 @@
+class ShowQuiz < ApplicationRecord
+end
